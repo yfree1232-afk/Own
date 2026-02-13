@@ -13,6 +13,7 @@ import urllib.parse
 import yt_dlp
 import tgcrypto
 import cloudscraper
+import sqlite3
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import unpad
 from base64 import b64encode, b64decode
@@ -126,8 +127,7 @@ async def add_auth_user(client: Client, message: Message):
             "Use format:\n/addauth user_id days\n\nExample:\n/addauth 123456789 30"
         )
 
-@bot.on_message(filters.command("users") & filters.private)
-import sqlite3
+
 
 @bot.on_message(filters.command("users") & filters.private)
 async def list_premium_users(client: Client, message: Message):
